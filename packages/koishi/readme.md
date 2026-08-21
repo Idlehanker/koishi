@@ -43,15 +43,17 @@ Koishi 更为开发者准备了众多专业功能，使插件开发者得以在�
 
 ## 跨仓库开发（external/）
 
-本仓库依赖的上游 monorepo（[satorijs/satori](https://github.com/satorijs/satori) 与 [cordiverse/minato](https://github.com/cordiverse/minato)）以 git submodule 的形式挂载在 `external/` 目录下（satori 跟踪 `v4` 分支，minato 跟踪 `v3` 分支，与 koishi/dev 对齐）。yarn workspaces 会自动将这些包链接进 `node_modules`，使本地源码直接生效。`external/` 下的其他内容不会被版本控制。
+本仓库依赖的上游 monorepo（[satorijs/satori](https://github.com/satorijs/satori) 与 [cordiverse/minato](https://github.com/cordiverse/minato)）以 git submodule 的形式挂载在 `external/` 目录下（satori 跟踪 `v4` 分支，minato 跟踪 `v3` 分支，与 koishi/dev 对齐）。**该功能目前在 `dev` 分支上可用**（`master` 等其他分支不包含 `.gitmodules`，直接对默认分支执行 `--recursive` 克隆不会拉取 submodule）。yarn workspaces 会自动将这些包链接进 `node_modules`，使本地源码直接生效。`external/` 下的其他内容不会被版本控制。
 
 ### 搭建流程
 
 ```bash
-# 新克隆：--recursive 会自动拉取两个 submodule 并检出固定提交
-git clone --recursive https://github.com/koishijs/koishi
+# 新克隆：submodule 仅在 dev 分支提供，-b dev --recursive 会自动拉取并检出固定提交
+#git clone --recursive -b dev https://github.com/koishijs/koishi
+git clone --recursive -b dev https://github.com/Idlehanker/koishi.git
 
-# 已有克隆：初始化 submodule
+# 已有克隆：先切换到 dev 分支，再初始化 submodule
+git checkout dev
 git submodule update --init
 
 # 必须使用 corepack yarn（系统自带的 yarn 1.x 不支持本仓库的 packageManager 约定）
