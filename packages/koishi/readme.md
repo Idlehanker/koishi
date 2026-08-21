@@ -43,21 +43,23 @@ Koishi 更为开发者准备了众多专业功能，使插件开发者得以在�
 
 ## 跨仓库开发（external/）
 
-本仓库依赖的上游 monorepo（[satorijs/satori](https://github.com/satorijs/satori) 与 [cordiverse/minato](https://github.com/cordiverse/minato)）可以克隆到 `external/` 目录中进行联合开发。yarn workspaces 会自动将这些包链接进 `node_modules`，使本地源码直接生效。`external/` 下的其他内容不会被版本控制。
+本仓库依赖的上游 monorepo（[satorijs/satori](https://github.com/satorijs/satori) 与 [cordiverse/minato](https://github.com/cordiverse/minato)）以 git submodule 的形式挂载在 `external/` 目录下（satori 跟踪 `v4` 分支，minato 跟踪 `v3` 分支，与 koishi/dev 对齐）。yarn workspaces 会自动将这些包链接进 `node_modules`，使本地源码直接生效。`external/` 下的其他内容不会被版本控制。
 
 ### 搭建流程
 
 ```bash
-# 克隆上游仓库（分支必须与 koishi 当前分支对齐：koishi/dev ↔ satori/v4 ↔ minato/v3）
-git clone https://github.com/satorijs/satori external/satori
-git clone https://github.com/cordiverse/minato external/minato
-git -C external/satori checkout v4
-git -C external/minato checkout v3
+# 新克隆：--recursive 会自动拉取两个 submodule 并检出固定提交
+git clone --recursive https://github.com/koishijs/koishi
+
+# 已有克隆：初始化 submodule
+git submodule update --init
 
 # 必须使用 corepack yarn（系统自带的 yarn 1.x 不支持本仓库的 packageManager 约定）
 COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack yarn install
 COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack yarn build
 ```
+
+submodule 默认固定在注册时的提交（可复现）；如需跟进上游分支最新提交，执行 `git submodule update --remote`（按 `.gitmodules` 中的 `branch = v4` / `branch = v3` 跟踪）。注意 git 不会自动执行安装与构建，上述两条 corepack 命令始终需要手动运行。
 
 ### 历史问题总结
 

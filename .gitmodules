@@ -1,0 +1,8 @@
+[submodule "external/satori"]
+	path = external/satori
+	url = https://github.com/satorijs/satori
+	branch = v4
+[submodule "external/minato"]
+	path = external/minato
+	url = https://github.com/cordiverse/minato
+	branch = v3

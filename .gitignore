@@ -11,8 +11,6 @@ tsconfig.temp.json
 
 /community
 /external/*
-!/external/minato
-!/external/satori
 /addons
 /coverage
 /docs
