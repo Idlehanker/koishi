@@ -16,12 +16,5 @@
     "types": [
       "yml-register/types",
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@koishijs/plugin-database-*": ["plugins/database/*/src"],
-      "@koishijs/plugin-*": ["plugins/common/*/src", "plugins/*/src"],
-      "@koishijs/*": ["packages/*/src"],
-      "koishi": ["packages/koishi/src"],
-    },
   },
 }

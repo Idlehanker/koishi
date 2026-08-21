@@ -10,7 +10,9 @@ temp
 tsconfig.temp.json
 
 /community
-/external
+/external/*
+!/external/minato
+!/external/satori
 /addons
 /coverage
 /docs
@@ -32,6 +34,7 @@ tsconfig.tsbuildinfo
 report.*.json
 
 .claude
+.codebuddy
 .eslintcache
 .DS_Store
 .idea

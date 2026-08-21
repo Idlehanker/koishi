@@ -37,6 +37,9 @@
     "test:text": "shx rm -rf coverage && c8 -r text yarn test"
   },
   "license": "MIT",
+  "resolutions": {
+    "@types/koa__router/@types/koa": "^2"
+  },
   "devDependencies": {
     "@cordisjs/eslint-config": "^1.1.1",
     "@sinonjs/fake-timers": "^6.0.1",
