@@ -1,6 +1,10 @@
 - id: 9ppgm4
   name: yakumo
   config:
+    # cordis is built separately via `yarn build:cordis` (its safe branch
+    # has upstream type errors; its d.ts is patched by scripts/fix-cordis-dts.mjs)
+    exclude:
+      - external/cordis/*/*
     pipeline:
       build:
         - tsc

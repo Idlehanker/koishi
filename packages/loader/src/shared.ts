@@ -37,8 +37,8 @@ interface StartMessage {
 declare module '@cordisjs/core' {
   // Theoretically, these properties will only appear on `ForkScope`.
   // We define them directly on `EffectScope` for typing convenience.
-  interface EffectScope<C> {
-    [Loader.kRecord]?: Dict<ForkScope<C>>
+  interface EffectScope<C extends Context = Context> {
+    [Loader.kRecord]?: Dict<import('cordis').ForkScope<C>>
     key?: string
   }
 }

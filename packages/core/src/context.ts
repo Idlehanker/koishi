@@ -14,9 +14,9 @@ import DatabaseMixin from './database'
 import BotMixin from './bot'
 import { SchemaService } from './schema'
 
-export type EffectScope = cordis.EffectScope<Context>
-export type ForkScope = cordis.ForkScope<Context>
-export type MainScope = cordis.MainScope<Context>
+export type EffectScope<C extends cordis.Context = Context> = cordis.EffectScope<C>
+export type ForkScope<C extends cordis.Context = Context> = cordis.ForkScope<C>
+export type MainScope<C extends cordis.Context = Context> = cordis.MainScope<C>
 
 export { Adapter, Bot, Element, h, HTTP, Logger, MessageEncoder, Messenger, Quester, Schema, segment, Universal, z } from '@satorijs/core'
 export type { Component, Fragment, Render } from '@satorijs/core'

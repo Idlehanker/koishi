@@ -26,7 +26,8 @@
     "yakumo": "yarn workspace @root/yakumo",
     "clean": "node -r esbuild-register build/clean",
     "compile": "yakumo esbuild",
-    "build": "yakumo esbuild && yakumo tsc",
+    "build:cordis": "yarn workspace @root/cordis yakumo esbuild && (yarn workspace @root/cordis yakumo tsc || true) && node scripts/fix-cordis-dts.mjs",
+    "build": "yarn build:cordis && yakumo esbuild && yakumo tsc",
     "bump": "yakumo version",
     "dep": "yakumo upgrade",
     "pub": "yakumo publish",
@@ -38,7 +39,18 @@
   },
   "license": "MIT",
   "resolutions": {
-    "@types/koa__router/@types/koa": "^2"
+    "@types/koa__router/@types/koa": "^2",
+    "cosmokit": "workspace:external/cosmokit",
+    "minato": "workspace:external/minato/packages/core",
+    "@minatojs/driver-memory": "workspace:external/minato/packages/memory",
+    "@satorijs/core": "workspace:external/satori/packages/core",
+    "cordis": "workspace:external/cordis/packages/cordis",
+    "@cordisjs/core": "workspace:external/cordis/packages/core",
+    "@cordisjs/loader": "workspace:external/cordis/packages/loader",
+    "@cordisjs/logger": "workspace:external/cordis/packages/logger",
+    "@cordisjs/schema": "workspace:external/cordis/packages/schema",
+    "@cordisjs/timer": "workspace:external/cordis/packages/timer",
+    "@cordisjs/plugin-hmr": "workspace:external/cordis/packages/hmr"
   },
   "devDependencies": {
     "@cordisjs/eslint-config": "^1.1.1",
