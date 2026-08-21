@@ -6,3 +6,7 @@
 	path = external/minato
 	url = https://github.com/cordiverse/minato
 	branch = v3
+[submodule "external/cosmokit"]
+	path = external/cosmokit
+	url = https://github.com/shigma/cosmokit
+	branch = master

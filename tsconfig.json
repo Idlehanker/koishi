@@ -13,6 +13,12 @@
       "@koishijs/*": [
         "packages/*/src",
       ],
+      "cosmokit": [
+        "external/cosmokit/src",
+      ],
+      "cosmokit/*": [
+        "external/cosmokit/src/*",
+      ],
       "*": [
         "packages/*/src",
       ],
