@@ -12,5 +12,5 @@
 	branch = master
 [submodule "external/cordis"]
 	path = external/cordis
-	url = https://github.com/cordiverse/cordis
-	branch = safe
+	url = https://github.com/Idlehanker/cordis
+	branch = safe-dev
