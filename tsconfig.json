@@ -35,6 +35,9 @@
       "cordis": [
         "external/cordis/packages/cordis/src",
       ],
+      "cordis/*": [
+        "external/cordis/packages/cordis/src/*",
+      ],
       "@cordisjs/plugin-*": [
         "external/cordis/packages/*/src",
       ],
