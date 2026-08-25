@@ -26,7 +26,7 @@
     "yakumo": "yarn workspace @root/yakumo",
     "clean": "node -r esbuild-register build/clean",
     "compile": "yakumo esbuild",
-    "build:cordis": "yarn workspace @root/cordis yakumo esbuild && yarn workspace @root/cordis yakumo tsc && node scripts/fix-cordis-dts.mjs && (git -C external/cordis checkout -- yakumo.yml 2>/dev/null || true)",
+    "build:cordis": "yarn workspace @root/cordis yakumo esbuild && yarn workspace @root/cordis yakumo tsc && (git -C external/cordis checkout -- yakumo.yml 2>/dev/null || true)",
     "build": "yarn build:cordis && yakumo esbuild && yakumo tsc",
     "bump": "yakumo version",
     "dep": "yakumo upgrade",
