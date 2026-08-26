@@ -80,7 +80,14 @@ COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack yarn build            # 构建全部�
 COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack yarn exec yakumo tsc --clean   # 清理构建产物与缓存
 COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack yarn test            # 运行单元测试
 ```
+## Monorepo supported
+```bash
+# update submodule by
+git submodule update --init --recursive
 
+# pull all submodules
+git pull --recurse-submodules
+```
 ## 许可证
 
 Koishi 完全使用 [MIT](./LICENSE) 协议开源，维护良好的开源生态从我做起 (*>ω<)φ
