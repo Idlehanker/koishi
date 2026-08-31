@@ -18,3 +18,7 @@
 	url = https://github.com/Idlehanker/cordis
 	branch = safe-dev
 	update = merge
+[submodule "external/boilerplate"]
+	path = external/boilerplate
+	url = https://github.com/cordiverse/boilerplate.git
+	branch = main
