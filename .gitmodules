@@ -22,3 +22,4 @@
 	path = external/boilerplate
 	url = https://github.com/cordiverse/boilerplate.git
 	branch = main
+	update = merge
