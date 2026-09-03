@@ -36,7 +36,7 @@ report.*.json
 .eslintcache
 .DS_Store
 .idea
-.vscode
+# .vscode
 .yarn
 *.suo
 *.ntvs*

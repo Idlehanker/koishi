@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Koishi: Start with Debugger (Auto Child Fork)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "${workspaceFolder}/packages/koishi/bin.js",
+        "start",
+        "--inspect",
+        "--log-level",
+        "3",
+        "--log-time"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "restart": false,
+      "autoAttachChildProcesses": true,
+      "sourceMaps": true
+    },
+    {
+      "name": "Koishi: Dev Mode with HMR & Debugger",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "${workspaceFolder}/packages/koishi/bin.js",
+        "start",
+        "--inspect",
+        "--log-level",
+        "3",
+        "--log-time",
+        "--debug",
+        "hmr,app,loader"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "restart": false,
+      "autoAttachChildProcesses": true,
+      "sourceMaps": true
+    },
+    {
+      "name": "Attach to Running Worker (Port 9229)",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "sourceMaps": true
+    }
+  ]
+}
