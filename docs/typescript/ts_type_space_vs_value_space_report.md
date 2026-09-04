@@ -4,7 +4,7 @@
 
 在 TypeScript 语言体系中，存在着两个平行且相互作用的二元世界：**值空间（Value Space）**与**类型空间（Type Space）**。
 
-在 [generic_programming_report.md](file:///d/koishi/docs/generic_programming_report.md) 中，我们探讨了泛型的核心价值与权衡，其中第 1 节指出了普通参数与泛型参数的核心差异：
+在 [generic_programming_report.md](file:///d/koishi/docs/typescript/generic_programming_report.md) 中，我们探讨了泛型的核心价值与权衡，其中第 1 节指出了普通参数与泛型参数的核心差异：
 * **普通函数参数**：传递的是**运行时的具体数值**（`x: 10`, `name: "Alice"`） —— 属于 **值空间**。
 * **泛型类型参数**：传递的是**编译时的类型信息**（`T: number`, `T: User`） —— 属于 **类型空间**。
 
@@ -334,7 +334,7 @@ export type User = z.infer<typeof UserSchema>;
 
 ## 6. 从二元空间视角看泛型编程（结合 `generic_programming_report.md`）
 
-参照 [generic_programming_report.md](file:///d/koishi/docs/generic_programming_report.md) 中的分析，泛型本质上是在**类型空间**中执行的“函数”与“计算”。
+参照 [generic_programming_report.md](file:///d/koishi/docs/typescript/generic_programming_report.md) 中的分析，泛型本质上是在**类型空间**中执行的“函数”与“计算”。
 
 ### 6.1 值空间计算 vs 类型空间计算
 
@@ -366,7 +366,7 @@ type TypeResult = ConcatTypes<"hello", "world">; // "hello_world" (编译期直�
 
 ### 6.3 从二元空间看 generic_programming_report.md 中的黄金法则
 
-在 [generic_programming_report.md](file:///d/koishi/docs/generic_programming_report.md) 第 5 节中提出了**泛型单次出现反模式（Single-Occurrence Anti-Pattern）**：
+在 [generic_programming_report.md](file:///d/koishi/docs/typescript/generic_programming_report.md) 第 5 节中提出了**泛型单次出现反模式（Single-Occurrence Anti-Pattern）**：
 
 > [!IMPORTANT]
 > **反模式示例**：
