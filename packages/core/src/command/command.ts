@@ -12,7 +12,9 @@ import { Computed } from '../filter'
 const logger = new Logger('command')
 
 export type Extend<O extends {}, K extends string, T> = {
-  [P in K | keyof O]?: (P extends keyof O ? O[P] : unknown) & (P extends K ? T : unknown)
+  [P in K | keyof O]? : 
+    (P extends keyof O ? O[P] : unknown) 
+    & (P extends K ? T : unknown)
 }
 
 export namespace Command {

@@ -10,10 +10,10 @@ temp
 tsconfig.temp.json
 
 /community
-/external
+/external/*
 /addons
 /coverage
-/docs
+#/docs
 /shiki
 /test
 /.yalc
@@ -32,10 +32,11 @@ tsconfig.tsbuildinfo
 report.*.json
 
 .claude
+.codebuddy
 .eslintcache
 .DS_Store
 .idea
-.vscode
+# .vscode
 .yarn
 *.suo
 *.ntvs*

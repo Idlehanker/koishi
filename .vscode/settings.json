@@ -1,0 +1,8 @@
+{
+  "typescript.preferGoToSourceDefinition": true,
+  "javascript.preferGoToSourceDefinition": true,
+  // Turn off background git fetch (stops periodic network traffic)
+  "git.autofetch": false,
+  // Stop the IDE from polling all submodules independently
+  "git.detectSubmodules": false
+}

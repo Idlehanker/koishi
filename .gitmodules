@@ -1,0 +1,25 @@
+[submodule "external/satori"]
+	path = external/satori
+	url = https://github.com/satorijs/satori
+	branch = v4
+	update = merge
+[submodule "external/minato"]
+	path = external/minato
+	url = https://github.com/cordiverse/minato
+	branch = v3
+	update = merge
+[submodule "external/cosmokit"]
+	path = external/cosmokit
+	url = https://github.com/Idlehanker/cosmokit
+	branch = master
+	update = merge
+[submodule "external/cordis"]
+	path = external/cordis
+	url = https://github.com/Idlehanker/cordis
+	branch = safe-dev
+	update = merge
+[submodule "external/boilerplate"]
+	path = external/boilerplate
+	url = https://github.com/cordiverse/boilerplate.git
+	branch = main
+	update = merge

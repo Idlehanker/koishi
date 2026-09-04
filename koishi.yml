@@ -1,0 +1,17 @@
+prefix:
+  - '!'
+logger:
+  showTime: yyyy-MM-dd hh:mm:ss
+  showDiff: true
+  levels:
+    base: 3
+plugins:
+  hmr:att37e:
+    root:
+      - plugins
+      - koishi.yml
+  proxy-agent:luk6i7: {}
+  http:m95zvw: {}
+  mock:xk1clu: {}
+  echo:gz3ph1: {}
+  help:u9z63n: {}

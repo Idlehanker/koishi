@@ -13,6 +13,37 @@
       "@koishijs/*": [
         "packages/*/src",
       ],
+      "cosmokit": [
+        "external/cosmokit/src",
+      ],
+      "cosmokit/*": [
+        "external/cosmokit/src/*",
+      ],
+      "satori": [
+        "external/satori/packages/core/src",
+      ],
+      "@satorijs/*": [
+        "external/satori/packages/*/src",
+        "external/satori/adapters/*/src",
+      ],
+      "minato": [
+        "external/minato/packages/core/src",
+      ],
+      "@minatojs/driver-*": [
+        "external/minato/packages/*/src",
+      ],
+      "cordis": [
+        "external/cordis/packages/cordis/src",
+      ],
+      "cordis/*": [
+        "external/cordis/packages/cordis/src/*",
+      ],
+      "@cordisjs/plugin-*": [
+        "external/cordis/packages/*/src",
+      ],
+      "@cordisjs/*": [
+        "external/cordis/packages/*/src",
+      ],
       "*": [
         "packages/*/src",
       ],
